@@ -30,10 +30,10 @@ const OrderSummary = () => {
   };
 
   return (
-    <div>
-      <h2 className="text-gray-600 text-2xl px-[20px] font-extrabold">Order Summary</h2>
-      <div className="px-[30px]" style={{ width: '375px', height: '375px' }}>
-        <Pie data={data} width={300} height={300} />
+    <div className="bg-white bg-opacity-50 p-6  rounded-lg shadow-md flex flex-col">
+      <h2 className="text-gray-600 text-2xl font-extrabold">Order Summary</h2>
+      <div className="px-[30px] " >
+        <Pie data={data}  />
       </div>
     </div>
   );

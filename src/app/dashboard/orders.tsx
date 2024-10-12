@@ -1,8 +1,8 @@
 import React from "react";
+import CountUp from 'react-countup';
 import { CircleDollarSign } from "lucide-react";
 
 const Orders = () => {
-  const orderValue = "74";
   const percentageChange = "+3.65";
   const sinceLastWeek = "Since last week";
 
@@ -14,7 +14,7 @@ const Orders = () => {
         <div>
           <h2 className="text-gray-600 text-2xl font-extrabold">Orders</h2>
           <br />
-          <div className="text-3xl font-bold">{orderValue}</div>
+          <div className="text-3xl font-bold"><CountUp start={0} end={74}/></div>
           <br />
           <div className="text-sm text-green-500">
             {percentageChange}% {sinceLastWeek}

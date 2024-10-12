@@ -2,9 +2,10 @@ import React from "react";
 
 const PopularProductsCard = () => {
   return (
-    <div className="grid grid-cols-1 gap-4 overflow-y-auto">
+    <div className="bg-white bg-opacity-50 p-6 h-full w-full rounded-lg shadow-md flex flex-col">
       <h2 className="text-gray-600 text-2xl px-[10px] font-extrabold">Popular Products</h2>
       {/* Product 1 */}
+    <div className="grid grid-cols-1 gap-3 overflow-y-auto">
       <div className="flex items-center border p-4 rounded-lg shadow-md">
         <img
           src="/favicon.ico"
@@ -54,6 +55,7 @@ const PopularProductsCard = () => {
           <p className="text-gray-600">$89.99</p>
         </div>
       </div>
+    </div>
     </div>
   );
 };

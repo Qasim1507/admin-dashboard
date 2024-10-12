@@ -9,7 +9,8 @@ import {
   Menu,
   SlidersHorizontal,
   User,
-  ShoppingBag
+  ShoppingBag,
+  Factory 
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -110,6 +111,12 @@ const Sidebar = () => {
           href="/analytics"
           icon={ChartColumn}
           label="Analytics"
+          isCollapsed={isSidebarCollapsed}
+        />
+        <SidebarLink
+          href="/inventory"
+          icon={Factory }
+          label="Inventory"
           isCollapsed={isSidebarCollapsed}
         />
         <SidebarLink

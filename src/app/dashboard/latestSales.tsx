@@ -38,7 +38,7 @@ const LatestSales = () => {
   };
 
   return (
-    <div className="px-5 py-4">
+    <div className="bg-white bg-opacity-50 p-6 h-full w-full rounded-lg shadow-md flex flex-col">
       <h2 className="text-gray-600 text-2xl font-extrabold mb-4">Latest Purchased Items</h2>
       <table className="min-w-full bg-white rounded-xl shadow-md">
         <thead>

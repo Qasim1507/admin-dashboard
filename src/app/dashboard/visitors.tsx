@@ -1,8 +1,8 @@
 import React from "react";
 import { UsersRound } from "lucide-react";
+import CountUp from 'react-countup';
 
 const Visitors = () => {
-  const visitorsValue = "382";
   const percentageChange = "+2.18";
   const sinceLastWeek = "Since last week";
 
@@ -14,7 +14,7 @@ const Visitors = () => {
         <div>
           <h2 className="text-gray-600 text-2xl font-extrabold">Visitors</h2>
           <br />
-          <div className="text-3xl font-bold">{visitorsValue}</div>
+          <div className="text-3xl font-bold"><CountUp start={100} end={328}/></div>
           <br />
           <div className="text-sm text-green-500">
             {percentageChange}% {sinceLastWeek}

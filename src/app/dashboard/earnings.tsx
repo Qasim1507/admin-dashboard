@@ -1,8 +1,8 @@
 import React from "react";
+import CountUp from 'react-countup';
 import { ShoppingBasket } from "lucide-react";
 
 const Earnings = () => {
-  const earningsValue = "$32,382";
   const percentageChange = "+3.65";
   const sinceLastWeek = "Since last week";
 
@@ -13,7 +13,7 @@ const Earnings = () => {
         <div>
           <h2 className="text-gray-600 text-2xl font-extrabold">Earnings</h2>
           <br />
-          <div className="text-3xl font-bold">{earningsValue}</div>
+          <div className="text-3xl font-bold"><CountUp start={31750} end={32382}/></div>
           <br />
           <div className="text-sm text-green-500">
             {percentageChange}% {sinceLastWeek}
