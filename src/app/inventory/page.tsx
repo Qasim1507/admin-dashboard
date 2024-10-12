@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { Plus } from 'lucide-react';
 
 interface Product {
   productId: number;
@@ -38,13 +37,6 @@ const Inventory = () => {
   return (
     <div className="bg-white bg-opacity-50 p-6 h-full w-full rounded-lg shadow-md flex flex-col relative">
       <h2 className="text-gray-600 text-2xl font-extrabold mb-4">Product Inventory</h2>
-      <button
-        onClick={handleAddRecord}
-        className="absolute top-4 right-4 bg-blue-500 text-white rounded-full p-2 hover:bg-blue-600 transition duration-200"
-        aria-label="Add Product"
-      >
-        <Plus />
-      </button>
       <table className="min-w-full bg-white rounded-xl shadow-md">
         <thead>
           <tr className="bg-gray-100">
