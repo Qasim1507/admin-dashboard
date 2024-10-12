@@ -1,6 +1,7 @@
 "use client";
 
 import Earnings from "./earnings";
+import LatestSales from "./latestSales";
 import Orders from "./orders";
 import OrderSummary from "./orderSummary";
 import PopularProductsCard from "./popularProductsCard";
@@ -26,9 +27,7 @@ const Dashboard = () => {
         <OrderSummary />
       </div>
 
-      <div className="col-span-3 md:row-span-1 xl:row-span-2 bg-red-50" />
-      <div className="col-span-3 md:row-span-1 xl:row-span-2 bg-red-50" />
-      <div className="col-span-3 md:row-span-1 xl:row-span-2 bg-red-50" />
+      <div className="col-span-3 md:row-span-1 xl:row-span-8" ><LatestSales/></div>
     </div>
   );
 };
