@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import { useAppDispatch, useAppSelector } from "@/app/redux";
-import { Sun, Moon } from "lucide-react";
 import { setIsDarkMode } from "@/state";
 
 const Settings = () => {
