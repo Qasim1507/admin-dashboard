@@ -1,35 +1,48 @@
 "use client";
 
+import CustomerRetention from "./customer";
 import CardExpenseSummary from "./expenseSummary";
 import SaleGraph from "./saleGraph";
+import ServerTraffic from "./servertraffic";
 import Traffic from "./traffic";
+import RevenueToday from "./revenuetoday";
+import CardPurchaseSummary from "./cardpurchasesummary";
+import ServerLoad from "./serverload";
 
 const Analytics = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-7 pb-4 custom-grid-rows">
-      {/* Sale Graph: Full width on small and medium, spans 2 columns on extra large */}
       <div className="col-span-1 md:col-span-2 xl:row-span-6">
         <SaleGraph />
       </div>
 
-      {/* Traffic: Takes full width on small screens, spans 1 column on medium, 1 column on extra large */}
       <div className="row-span-3 xl:row-span-6 md:col-span-1">
         <Traffic />
       </div>
 
-      {/* Expense Summary: Takes full width on small screens, spans 1 column on medium, 1 column on extra large */}
       <div className="row-span-3 xl:row-span-6 md:col-span-1">
         <CardExpenseSummary />
       </div>
 
-      {/* Placeholder Component 1 */}
-      <div className="row-span-3 bg-red-50 xl:row-span-6 md:col-span-1"></div>
+      <div className="row-span-3 xl:row-span-6 md:col-span-1">
+        <CustomerRetention />
+      </div>
 
-      {/* Placeholder Component 2 */}
-      <div className="row-span-3 bg-red-50 xl:row-span-6 md:col-span-1"></div>
+      <div className="row-span-3 xl:row-span-6 md:col-span-1 flex flex-col">
+        <div className="flex-1">
+          <ServerTraffic />
+        </div>
+        <div className="flex-1">
+          <RevenueToday />
+        </div>
+        <div className="flex-1">
+          <ServerLoad />
+        </div>
+      </div>
 
-      {/* Placeholder Component 3: Full width on small screens, spans all columns on medium, 1 column on extra large */}
-      <div className="col-span-1 md:col-span-2 bg-red-50 md:row-span-1 xl:row-span-6"></div>
+      <div className="col-span-1 md:col-span-2 xl:row-span-6">
+        <CardPurchaseSummary/>
+      </div>
     </div>
   );
 };

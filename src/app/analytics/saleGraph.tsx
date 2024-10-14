@@ -1,8 +1,8 @@
 "use client";
 
+import { LineChart } from "recharts";
+import { Line } from "recharts";
 import {
-  AreaChart,
-  Area,
   ResponsiveContainer,
   XAxis,
   YAxis,
@@ -14,33 +14,33 @@ import {
 const productSales = [
   {
     name: "Jan",
-    product1: 1000,
-    product2: 1400,
+    Sneakers: 2000,
+    Accessory: 1400,
   },
   {
     name: "Feb",
-    product1: 1200,
-    product2: 1300,
+    Sneakers: 1600,
+    Accessory: 1900,
   },
   {
     name: "Mar",
-    product1: 1400,
-    product2: 1230,
+    Sneakers: 1800,
+    Accessory: 2130,
   },
   {
     name: "Apr",
-    product1: 1300,
-    product2: 1400,
+    Sneakers: 2300,
+    Accessory: 1900,
   },
   {
     name: "May",
-    product1: 1400,
-    product2: 1300,
+    Sneakers: 1400,
+    Accessory: 2300,
   },
   {
     name: "Jun",
-    product1: 1230,
-    product2: 1320,
+    Sneakers: 2230,
+    Accessory: 1320,
   },
 ];
 
@@ -49,25 +49,23 @@ const SaleGraph = () => {
     <div className="bg-white bg-opacity-50 p-6 h-full w-full rounded-lg shadow-md flex flex-col">
       <h2 className="text-gray-600 text-2xl font-extrabold mb-4">Sales Chart</h2>
       <ResponsiveContainer className="px-1">
-        <AreaChart width={500} height={400} data={productSales}>
+        <LineChart width={500} height={400} data={productSales}>
           <YAxis domain={[0, 'dataMax + 1000']} interval={0} tickCount={6} />
           <XAxis dataKey="name" />
           <CartesianGrid strokeDasharray="5 5" />
           <Tooltip content={<CustomTooltip />} />
           <Legend/>
-          <Area
-            dataKey="product1"
+          <Line
+            dataKey="Sneakers"
             stroke="#2563eb"
-            fill="#3b82f6"
-            stackId={1}
+            strokeWidth={3}
           />
-          <Area
-            dataKey="product2"
+          <Line
+            dataKey="Accessory"
             stroke="#7c3aed"
-            fill="#8b5cf6"
-            stackId={1}
+            strokeWidth={3}
           />
-        </AreaChart>
+        </LineChart>
       </ResponsiveContainer>
     </div>
   );
@@ -79,11 +77,11 @@ const CustomTooltip = ({ active, payload, label }) => {
       <div className="p-4 bg-slate-900 flex flex-col gap-4 rounded-md">
         <p className="text-lg">{label}</p>
         <p className="text-md text-blue-400">
-          Product 1:
+          Sneakers:
           <span className="ml-2">${payload[0].value}</span>
         </p>
         <p className="text-md text-indigo-400">
-          Product 2:
+          Accessory:
           <span className="ml-2">${payload[1].value}</span>
         </p>
       </div>

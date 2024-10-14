@@ -10,18 +10,14 @@ const data = {
     {
       data: [50, 24],
       backgroundColor: [
-        'rgba(136, 132, 216, 0.9)', 
-        'rgba(131, 166, 237, 0.9)', 
-      ],
-      hoverBackgroundColor: [
-        'rgba(123, 121, 209, 0.8)', 
-        'rgba(106, 142, 217, 0.8)', 
+        'rgba(136, 132, 216, 0.2)', 
+        'rgba(131, 166, 237, 0.2)', 
       ],
       borderColor: [
-        'rgba(136, 132, 216, 0.3)', 
-        'rgba(131, 166, 237, 0.3)', 
+        'rgba(136, 132, 216, 1)', 
+        'rgba(131, 166, 237, 1)', 
       ],
-      borderWidth: 5,
+      borderWidth: 4,
     },
   ],
 };
@@ -86,7 +82,7 @@ export default function RadialChart() {
       <div style={{ position: 'relative', height: '500px', width: '100%' }}>
         <Doughnut ref={chartRef} data={data} options={options} />
       </div>
-      {renderCustomLegend()} {/* Call the custom legend rendering function */}
+      {renderCustomLegend()}
     </div>
   );
 }
