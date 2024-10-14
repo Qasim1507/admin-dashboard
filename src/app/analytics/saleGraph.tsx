@@ -22,8 +22,11 @@ const productSales = [
   { name: "Jun", Sneakers: 2230, Accessory: 1320 },
 ];
 
-// Custom tooltip component with proper typing
-const CustomTooltip: React.FC<TooltipProps<any, any>> = ({ active, payload, label }) => {
+const CustomTooltip: React.FC<TooltipProps<string, number>> = ({
+  active,
+  payload,
+  label,
+}) => {
   if (active && payload && payload.length) {
     return (
       <div className="p-4 bg-slate-900 flex flex-col gap-4 rounded-md">
