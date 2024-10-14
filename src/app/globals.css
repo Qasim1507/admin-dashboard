@@ -30,3 +30,20 @@ body,
     grid-template-rows: repeat(8, 7.5vh);
   }
 }
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: 'blue'; /* Light background for the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #090F1C; /* Darker color for the thumb */
+  border-radius: 10px; /* Rounded scrollbar */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Darker on hover */
+}

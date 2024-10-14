@@ -10,16 +10,16 @@ interface Item {
 
 const LatestSales = () => {
   const items: Item[] = [
-    { id: 1, name: "Laptop", purchaseDate: "2024-10-10", status: "PLACED", quantity: 1 },
-    { id: 2, name: "Smartphone", purchaseDate: "2024-10-09", status: "IN TRANSIT", quantity: 3 },
-    { id: 3, name: "Headphones", purchaseDate: "2024-10-08", status: "DELIVERED", quantity: 2 },
-    { id: 4, name: "Tablet", purchaseDate: "2024-10-07", status: "RETURNED", quantity: 2 },
-    { id: 5, name: "Monitor", purchaseDate: "2024-10-06", status: "PLACED", quantity: 1 },
-    { id: 6, name: "Keyboard", purchaseDate: "2024-10-05", status: "DELIVERED", quantity: 1 },
-    { id: 7, name: "Mouse", purchaseDate: "2024-10-04", status: "IN TRANSIT", quantity: 2 },
-    { id: 8, name: "External Hard Drive", purchaseDate: "2024-10-03", status: "DELIVERED", quantity: 3 },
-    { id: 9, name: "Router", purchaseDate: "2024-10-02", status: "RETURNED", quantity: 2 },
-    { id: 10, name: "Desk Chair", purchaseDate: "2024-10-01", status: "PLACED", quantity: 1 },
+    { id: 1, name: "New Balance 990", purchaseDate: "2024-09-10", status: "PLACED", quantity: 1 },
+    { id: 2, name: "Nike Dunk Low", purchaseDate: "2024-09-09", status: "IN TRANSIT", quantity: 3 },
+    { id: 3, name: "Vans Old Skool", purchaseDate: "2024-1-08", status: "DELIVERED", quantity: 2 },
+    { id: 4, name: "Adidas Stan Smith", purchaseDate: "2024-10-07", status: "RETURNED", quantity: 2 },
+    { id: 5, name: "Vans Old Skool", purchaseDate: "2024-10-06", status: "PLACED", quantity: 1 },
+    { id: 6, name: "Asics Gel-Lyte III", purchaseDate: "2024-03-05", status: "DELIVERED", quantity: 1 },
+    { id: 7, name: "Balenciaga Triple S", purchaseDate: "2024-10-04", status: "IN TRANSIT", quantity: 2 },
+    { id: 8, name: "Nike SB Dunk", purchaseDate: "2024-02-03", status: "DELIVERED", quantity: 3 },
+    { id: 9, name: "Fila Disruptor II", purchaseDate: "2024-10-02", status: "RETURNED", quantity: 2 },
+    { id: 10, name: "Nike Air Presto", purchaseDate: "2024-09-01", status: "PLACED", quantity: 1 },
   ];
 
   const getStatusBadge = (status: string) => {
